@@ -1,0 +1,60 @@
+.Dd March 6, 2022
+.Dt MANPATH 3
+.Os
+.Sh NAME
+.Nm manpath
+.Nd return the search path for manual pages
+.Sh SYNOPSIS
+.Em import manpath
+.Pp
+.Ft String
+.Fo manpath.get_manpath
+.Fa "Integer debug_level = 0"
+.Fa "Boolean quiet_mode = False"
+.Fc
+.Ft String
+.Fo manpath.get_locales
+.Fa "Integer debug_level = 0"
+.Fa "Boolean quiet_mode = False"
+.Fc
+.Sh DESCRIPTION
+The
+.Fn get_manpath
+function returns a string of colon separated directories containing manual pages.
+.Pp
+The
+.Fn get_locales
+function returns a string of colon separated locales for which there are localized manual pages.
+.Pp
+For each of the two functions, if the optional
+.Fa debug_level
+is set to 1, 2 or 3 it will also print increasingly verbose debugging messages to the console.
+.Pp
+And if the optional
+.Fa quiet_mode
+argument is set to True it will discard warning messages printed to the console.
+.Sh ENVIRONMENT
+The following environment variables affect the execution of
+.Nm :
+.Bl -tag -width ".Ev MANLOCALES"
+.It Ev MANLOCALES
+If set, causes the utility to override any other configuration found on the system.
+.It Ev MANPATH
+If set, causes the utility to override any other configuration found on the system.
+.It Ev PATH
+Influences the manual path as described in the
+.Sx IMPLEMENTATION NOTES .
+.El
+.Sh SEE ALSO
+.Xr manpath 1
+.Sh STANDARDS
+The
+.Lb manpath
+tries to follow the PEP 8 style guide for Python code.
+.Sh HISTORY
+This library was made for the
+.Lk https://github.com/HubTou/PNU [PNU project]
+.Sh LICENSE
+It is available under the 3-clause BSD license.
+.Sh AUTHORS
+.An Hubert Tournier
