@@ -89,7 +89,7 @@ It is available under the [3-clause BSD license](https://opensource.org/licenses
 The manpath(1) manual page is mainly based on the one written for [FreeBSD](https://www.freebsd.org/) by [Gordon Tetlow](https://github.com/tetlowgm).
 
 ## BUGS
-This re-implementation corrects 3 (minor) bugs or the original command:
+This re-implementation corrects 3 (minor) bugs of the original command:
 * No warning was displayed when MANPATH was set
 * Default manpath entries were supplied when PATH was not set, before "Adding default manpath entries"
 * A "Skipping duplicate manpath entry" message was incorrectly displayed with MANPATH directives with empty content in config files
